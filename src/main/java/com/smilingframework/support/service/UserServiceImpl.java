@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.smilingframework.support.dao.UserDao;
-import com.smilingframework.support.model.User;
+import com.smilingframework.support.model.sys.User;
 
 @Service
 public class UserServiceImpl implements UserService {
