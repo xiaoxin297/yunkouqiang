@@ -30,7 +30,7 @@ public class RegisterControlelr extends BaseController {
 	}
 	
 	@RequestMapping(value = "/register",method = RequestMethod.POST)
-	public BaseResponse registerPost(@RequestBody @Valid RegisterAddRequest request , BindingResult result){
+	public BaseResponse registerPost(@Valid RegisterAddRequest request , BindingResult result){
 		User user = new User();
 		BeanUtils.copyProperties(request, user);
 		userService.add(user);

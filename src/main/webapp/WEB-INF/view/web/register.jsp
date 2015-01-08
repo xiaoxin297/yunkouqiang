@@ -64,6 +64,8 @@
 	var inputCss = $("#phone").css("border");
 	$(function() {
 		var ajaxObj = {
+				
+				type:"POST",
 				success:function(data){
 					alert(data);
 				}
