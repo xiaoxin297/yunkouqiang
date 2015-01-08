@@ -44,7 +44,7 @@
 								</div>
 								<div class="row 25%">
 									<div class="12u">
-										<input id="registerButton"  type="button" value="提交">
+										<input id="registerButton"  type="submit" value="提交">
 									</div>
 								</div>
 							</form>
@@ -64,8 +64,6 @@
 	var inputCss = $("#phone").css("border");
 	$(function() {
 		var ajaxObj = {
-				
-				type:"POST",
 				success:function(data){
 					alert(data);
 				}
@@ -89,7 +87,8 @@
 			if(!getError("rerepassword","两次输入密码不一致",checkPassword())){
 				return false;
 			}
-			$("#registerForm").submit($(this).ajaxSubmit(ajaxObj));
+			$('#registerForm').ajaxSubmit(ajaxObj);
+			return false;
 		});
 		$("#phone").focus(function(){
 			 $("#phone").css("border",inputCss);

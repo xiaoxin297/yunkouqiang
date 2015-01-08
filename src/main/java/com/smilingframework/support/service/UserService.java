@@ -1,8 +1,12 @@
 package com.smilingframework.support.service;
 
+import com.smilingframework.service.base.BaseService;
 import com.smilingframework.support.model.sys.User;
 
-public interface UserService {
+/**
+ * @author Administrator
+ *
+ */
+public interface UserService extends BaseService<User> {
 
-	public void add(User user);
 }

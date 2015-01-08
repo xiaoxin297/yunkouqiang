@@ -10,7 +10,7 @@
             <!--配置数据库用户名 -->
             <property name="hibernate.connection.username" value="root" />
             <!--配置数据库密码 -->
-            <property name="hibernate.connection.password" value="123456" />
+            <property name="hibernate.connection.password" value="111111" />
             <!--配置数据库url -->
             <property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/yunkouqiang?useUnicode=true&amp;characterEncoding=UTF-8" />  
             <!--自动输出schema创建DDL语句 -->

@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.smilingframework.dao.base.BaseEntity;
 import com.smilingframework.support.model.sys.User;
@@ -30,10 +31,14 @@ public class RegisterControlelr extends BaseController {
 	}
 	
 	@RequestMapping(value = "/register",method = RequestMethod.POST)
+	@ResponseBody
 	public BaseResponse registerPost(@Valid RegisterAddRequest request , BindingResult result){
+		if(result.hasErrors()){
+			return setRequestErroorResult(result);
+		}
 		User user = new User();
 		BeanUtils.copyProperties(request, user);
-		userService.add(user);
+		userService.save(user);
 		return setSuccestResult(new BaseResponse());
 	}
 }
