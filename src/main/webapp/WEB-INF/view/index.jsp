@@ -15,7 +15,7 @@
 				<div class="container">
 
 					<!-- Header -->
-						<%@ include file="/common/web/static.jsp" %>
+						<%@ include file="/common/web/header.jsp" %>
 					<!-- Banner -->
 						<div id="banner">
 							<h2><strong>云口腔:</strong> 永久免费
