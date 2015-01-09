@@ -9,4 +9,7 @@ import com.smilingframework.support.model.sys.User;
  */
 public interface UserService extends BaseService<User> {
 
+	public User findByToken(String token);
+	
+	public User findByPhone(String phone);
 }

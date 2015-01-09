@@ -45,4 +45,7 @@
         </property>
     </bean>
 	
+	<mvc:interceptors>
+    	<bean class="com.smilingframework.support.interceptor.AuthInterceptor"></bean>
+    </mvc:interceptors>
 </beans>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp"%>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -22,12 +23,10 @@
 							<br />
 							最好的用户体验、最安全的数据管理、随时随地使用</h2>
 							<!-- <p>Does this statement make you want to click the big shiny button?</p> -->
-							<a href="register.html" class="button big icon fa-check-circle">立即注册</a>
+							<a href="${root}/register" class="button big icon fa-check-circle">立即注册</a>
 						</div>
-
 				</div>
 			</div>
-		
 		<!-- Main Wrapper -->
 			 <div id="main-wrapper">
 				<div class="wrapper style1">

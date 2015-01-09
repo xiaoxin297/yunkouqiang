@@ -4,15 +4,25 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+function getContextPath() {
+    var pathName = document.location.pathname;
+    var index = pathName.substr(1).indexOf("/");
+    var result = pathName.substr(0,index+1);
+    return result;
+}
 
+(function($) {
+	var root = getContextPath();
+	if(root == "/forword"){
+		root = "";
+	}
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global':	{ range: '*', href: '/resources/web/css/style.css' },
-			'desktop':	{ range: '737-', href: '/resources/web/css/style-desktop.css', containers: 1200, grid: { gutters: 50 } },
-			'1000px':	{ range: '737-1200', href: '/resources/web/css/style-1000px.css', containers: 1000, grid: { gutters: 35 }, viewport: { width: 1080 } },
-			'mobile':	{ range: '-736', href: '/resources/web/css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 10 }, viewport: { scalable: false } }
+			'global':	{ range: '*', href: root +'/resources/web/css/style.css' },
+			'desktop':	{ range: '737-', href:  root +'/resources/web/css/style-desktop.css', containers: 1200, grid: { gutters: 50 } },
+			'1000px':	{ range: '737-1200', href:  root +'/resources/web/css/style-1000px.css', containers: 1000, grid: { gutters: 35 }, viewport: { width: 1080 } },
+			'mobile':	{ range: '-736', href:  root +'/resources/web/css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 10 }, viewport: { scalable: false } }
 		},
 		plugins: {
 			layers: {

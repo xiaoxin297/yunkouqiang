@@ -1,5 +1,7 @@
 package com.smilingframework.support.model.sys;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -16,9 +18,16 @@ public class User extends BaseEntity {
 	private String phone;// 手机 登录帐号
 	private String token;// 用户票据
 	private String email;
+	private Date expirationTime; // token过期时间
 	
 	
 	
+	public Date getExpirationTime() {
+		return expirationTime;
+	}
+	public void setExpirationTime(Date expirationTime) {
+		this.expirationTime = expirationTime;
+	}
 	public String getEmail() {
 		return email;
 	}

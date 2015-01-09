@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp"%>
 <!--[if lte IE 8]><script src="${root}/resources/web/css/ie/html5shiv.js"></script><![endif]-->
 <script src="${root}/resources/js/jquery-1.10.2.min.js"></script>
 <script src="${root}/resources/web/js/jquery.dropotron.min.js"></script>

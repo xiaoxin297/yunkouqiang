@@ -1,5 +1,7 @@
 package com.smilingframework.support.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,19 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 
 	@Autowired
 	private UserDao userDao;
+
+	@Override
+	public User findByToken(String token) {
+		List<User> users = userDao.findByToken(token);
+		if(users.size() == 1){
+			return users.get(0);
+		}
+		return null;
+	}
 	
+	@Override
+	public User findByPhone(String phone) {
+		return userDao.findByPhone(phone);
+	}
+
 }

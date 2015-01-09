@@ -31,7 +31,7 @@ public class SysUtils {
 	 */
 	public static String getToken(final String uuid){
 		synchronized (uuid) {
-			return RandomUtils.random(18);
+			return RandomUtils.random(36);
 		}
 	}
 	
