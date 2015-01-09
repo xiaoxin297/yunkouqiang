@@ -36,6 +36,9 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		logger.info("============================================== ");
 		BaseResponse result = new BaseResponse();
 		request.setAttribute("startTime", startTime);
+		if(uri.equals("/")){
+			return super.preHandle(request, response, handler);
+		}
 		NeedLogin needLogin = ((HandlerMethod) handler).getMethod().getAnnotation(NeedLogin.class);
 		if (needLogin == null) {
 			needLogin = ((HandlerMethod) handler).getBeanType().getAnnotation(NeedLogin.class);

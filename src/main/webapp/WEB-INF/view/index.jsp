@@ -23,7 +23,7 @@
 							<br />
 							最好的用户体验、最安全的数据管理、随时随地使用</h2>
 							<!-- <p>Does this statement make you want to click the big shiny button?</p> -->
-							<a href="${root}/register" class="button big icon fa-check-circle">立即注册</a>
+							<a href="${root}/forword/web/register" class="button big icon fa-check-circle">立即注册</a>
 						</div>
 				</div>
 			</div>
