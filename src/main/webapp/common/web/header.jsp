@@ -11,7 +11,7 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a href="${root}">首页</a></li>
+				<li><a href="${root}/">首页</a></li>
 				<li><a href="${root}/register">注册</a></li>
 				<li><a href="${root}">登录</a></li>
 				<li><a href="${root}/feedback">留言</a></li>

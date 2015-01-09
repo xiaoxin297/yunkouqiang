@@ -58,14 +58,16 @@
 	<%@ include file="/common/web/footer.jsp"%>
 </body>
 
-<script type="text/javascript" src="${root}/resources/js/jquery.validate.js"></script>
 <script type="text/javascript" src="${root}/resources/js/jquery.form.js"></script>
 <script type="text/javascript">
 	var inputCss = $("#phone").css("border");
 	$(function() {
 		var ajaxObj = {
 				success:function(data){
-					alert(data);
+					if(data.code == "000000"){
+						alert("注册成功");
+						window.location.href="${root}/";
+					}
 				}
 		};
 		$("#registerButton").click(function(){

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.smilingframework.dao.base.BaseEntity;
+import com.smilingframework.support.common.SysUtils;
 import com.smilingframework.support.model.sys.User;
 import com.smilingframework.support.service.UserService;
 import com.smilingframework.support.web.web.model.RegisterAddRequest;
@@ -38,6 +39,7 @@ public class RegisterControlelr extends BaseController {
 		}
 		User user = new User();
 		BeanUtils.copyProperties(request, user);
+		user.setPassword(SysUtils.getPassword(user.getPassword()));
 		userService.save(user);
 		return setSuccestResult(new BaseResponse());
 	}
