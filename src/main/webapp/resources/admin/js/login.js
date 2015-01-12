@@ -60,8 +60,7 @@ var valication = {
 	},
 
 	errorPlacement : function(error, element) {
-		error.addClass('help-small no-left-padding').insertAfter(
-				element.closest('.input-icon'));
+		error.addClass('help-small no-left-padding').insertAfter(element.closest('.input-icon'));
 	}
 };
 var Login = function() {
