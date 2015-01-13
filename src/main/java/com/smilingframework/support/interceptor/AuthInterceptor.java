@@ -13,6 +13,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.smilingframework.core.runtime.utils.TimeUtils;
+import com.smilingframework.support.common.FinalValue;
 import com.smilingframework.support.model.sys.User;
 import com.smilingframework.support.service.UserService;
 import com.smilingframework.web.annotation.NeedLogin;
@@ -60,7 +61,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 			if(TimeUtils.compare(user.getExpirationTime()) == 1){
 				return authFail(request,response, result);
 			}
-			
+			request.setAttribute(FinalValue.REQUEST_USER, user);
 			return true;
 		}
 		return super.preHandle(request, response, handler);

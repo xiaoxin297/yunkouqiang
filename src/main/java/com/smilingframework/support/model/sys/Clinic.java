@@ -1,5 +1,6 @@
 package com.smilingframework.support.model.sys;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -18,8 +19,18 @@ public class Clinic extends BaseEntity {
 	private String name;
 	private String identification; //诊所标示
 	private String address; // 诊所地址
+	@Column(name="user_id")
+	private String userId;// 诊所ID
 	
 	
+	
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	public String getName() {
 		return name;
 	}

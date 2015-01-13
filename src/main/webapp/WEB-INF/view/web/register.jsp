@@ -67,7 +67,9 @@
 				success:function(data){
 					if(data.code == "000000"){
 						alert("注册成功");
-						window.location.href="${root}/";
+						window.location.href="${root}/forword/admin/login";
+					}else{
+						alert(data.memo);
 					}
 				}
 		};
