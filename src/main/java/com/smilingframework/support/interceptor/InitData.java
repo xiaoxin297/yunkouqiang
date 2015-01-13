@@ -13,7 +13,9 @@ import org.springframework.stereotype.Component;
 
 import com.smilingframework.core.runtime.utils.PropertiesUtil;
 import com.smilingframework.support.model.sys.Modular;
+import com.smilingframework.support.model.sys.Role;
 import com.smilingframework.support.service.ModularService;
+import com.smilingframework.support.service.RoleService;
 
 /**
  * @author 初始化数据库
@@ -28,6 +30,8 @@ public class InitData implements InitializingBean{
 	
 	@Autowired
 	private ModularService modularService;
+	@Autowired
+	private RoleService roleService;
 	
 	@Override
 	@Transactional(rollbackOn={Exception.class})
@@ -43,13 +47,29 @@ public class InitData implements InitializingBean{
 		logger.info("======================================");
 	}
 	
+	private void initRole(){
+		List<Role> list = roleService.findAll();
+		if(list.size() > 0){
+			return;
+		}
+		list =	new ArrayList<>();
+		Role role1 = new Role();
+		role1.setName("医生");
+		list.add(role1);
+		Role role2 = new Role();
+		role1.setName("护士");
+		list.add(role2);
+		Role role3 = new Role();
+		role1.setName("前台");
+		list.add(role3);
+		roleService.save(list);
+	}
+	
 	private void initMoular(){
 		List<Modular>  list = modularService.findAll();
 		if(list.size() > 0 ){
 			return;
 		}
-		String[] ids = new String[]{"1","10","11","2","20","21","22","3","30","31","32","33","4","40","400","401","41","410","411","42","420","421","43"};
-		modularService.deleteBatch(ids);
 		list = new ArrayList<>();
 		Modular modular1 = new Modular("1","预约中心","icon-table","0");
 		Modular modular10 = new Modular("10","新增预约","","1");

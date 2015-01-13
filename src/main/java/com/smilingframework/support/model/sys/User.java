@@ -2,6 +2,7 @@ package com.smilingframework.support.model.sys;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -19,9 +20,32 @@ public class User extends BaseEntity {
 	private String token;// 用户票据
 	private String email;
 	private Date expirationTime; // token过期时间
+	@Column(name="clinic_id")
+	private String clinicId; // 诊所ID
+	private String identification; //诊所标识
+	@Column(name="is_main",columnDefinition="boolean default 0")
+	private boolean isMain;// 是否最高权限
 	
 	
 	
+	public boolean isMain() {
+		return isMain;
+	}
+	public void setMain(boolean isMain) {
+		this.isMain = isMain;
+	}
+	public String getClinicId() {
+		return clinicId;
+	}
+	public void setClinicId(String clinicId) {
+		this.clinicId = clinicId;
+	}
+	public String getIdentification() {
+		return identification;
+	}
+	public void setIdentification(String identification) {
+		this.identification = identification;
+	}
 	public Date getExpirationTime() {
 		return expirationTime;
 	}

@@ -41,7 +41,10 @@ public class RegisterControlelr extends BaseController {
 		user = new User();
 		BeanUtils.copyProperties(request, user);
 		user.setPassword(SysUtils.getAdminPassword(user.getPassword()));
+		user.setMain(true);
 		userService.save(user);
 		return setSuccestResult(new BaseResponse());
 	}
+	
+	
 }

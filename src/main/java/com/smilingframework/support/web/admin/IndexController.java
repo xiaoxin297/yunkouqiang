@@ -1,5 +1,8 @@
 package com.smilingframework.support.web.admin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -10,8 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.smilingframework.support.common.FinalValue;
+import com.smilingframework.support.model.sys.Modular;
+import com.smilingframework.support.model.sys.Role;
 import com.smilingframework.support.model.sys.User;
 import com.smilingframework.support.service.ClinicService;
+import com.smilingframework.support.service.ModularService;
+import com.smilingframework.support.service.RoleService;
 import com.smilingframework.support.web.admin.model.index.IndexRequest;
 import com.smilingframework.support.web.base.KouQiangController;
 
@@ -20,6 +27,10 @@ public class IndexController extends KouQiangController {
 	
 	@Autowired
 	private ClinicService clinicService;
+	@Autowired
+	private ModularService modularService;
+	@Autowired
+	private RoleService roleService;
 
 	@RequestMapping(value = "/index",method=RequestMethod.GET)
 	public String index(HttpServletRequest request){
@@ -32,7 +43,17 @@ public class IndexController extends KouQiangController {
 		}
 		return "/admin/index";
 	}
-	
-	
+	@RequestMapping(value = "/modular",method=RequestMethod.GET)
+	public String getModels(){
+		User user = getUser();
+		List<Modular> modulars = new ArrayList<>();
+		if(user.isMain()){
+			modulars = modularService.findAll();
+		}else{
+			Role role = roleService.findRoleByUserId(user.getUuid());
+			modulars = modularService.findByRoleId(role.getUuid());
+		}
+		return "/base/sidebar";
+	}
 	
 }
