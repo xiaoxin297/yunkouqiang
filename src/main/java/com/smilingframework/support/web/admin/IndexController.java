@@ -40,7 +40,8 @@ public class IndexController extends KouQiangController {
 		// 如果没有建立诊所就判定为第一次登陆
 		boolean hasClinic = clinicService.hasClinic(user.getUuid());
 		if(!hasClinic){
-			// 第一次登陆
+			// 第一次登陆 跳转到新增诊所页面
+			return "/admin/index-first";
 		}
 		return "/admin/index";
 	}

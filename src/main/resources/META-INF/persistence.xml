@@ -28,6 +28,6 @@
 			<property name="hibernate.c3p0.acquire_increment" value="2"/>
 			<property name="hibernate.c3p0.validate" value="true"/> 
         </properties>  
-        <jar-file>yunkouqiang/WEB-INF/lib/smilingframework-dao-1.0.jar</jar-file>
+<!--         <jar-file>yunkouqiang/WEB-INF/lib/smilingframework-dao-1.0.jar</jar-file> -->
     </persistence-unit>  
 </persistence> 

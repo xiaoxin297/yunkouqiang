@@ -13,7 +13,8 @@ var ajaxObj = {
 			root = "";
 		}
 		if (data.code == "000000") {
-			window.location.href = root+"/forword/admin/index?token="+data.result.token;
+			//window.location.href = root+"/forword/admin/index?token="+data.result.token;
+			window.location.href = root+"/index?token="+data.result.token;
 		} else {
 			$(".alert-error-login").hide();
 			$(".alert-error-login").show();
