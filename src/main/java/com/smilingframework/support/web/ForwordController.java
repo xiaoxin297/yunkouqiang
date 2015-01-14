@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.smilingframework.web.annotation.NeedLogin;
 
 @Controller
-@NeedLogin(needLogin=false)
+@NeedLogin(needLogin=true)
 public class ForwordController {
 
 	@RequestMapping("/forword/{position}/{page}")

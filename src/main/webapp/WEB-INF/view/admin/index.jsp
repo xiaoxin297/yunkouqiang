@@ -46,7 +46,7 @@
 
 				<!-- BEGIN LOGO -->
 
-				<a class="brand" href="index.html"> <img src="${root}/resources/admin/image/logo.png" alt="logo" />
+				<a class="brand" href="index.html"> <img src="${root}/resources/admin/image/logo-big.png" alt="logo" />
 
 				</a>
 
@@ -2448,6 +2448,7 @@
 	<script src="${root}/resources/admin/js/app.js" type="text/javascript"></script>
 
 	<script src="${root}/resources/admin/js/index.js" type="text/javascript"></script>
+	<script src="${root}/resources/admin/js/sidebar.js" type="text/javascript"></script>
 
 	<!-- END PAGE LEVEL SCRIPTS -->
 
@@ -2457,7 +2458,7 @@
 			App.init(); // initlayout and core plugins
 
 			Index.init();
-
+			Sidebar.init();
 			//Index.initJQVMAP(); // init index page's custom scripts
 
 			//Index.initCalendar(); // init index page's custom scripts

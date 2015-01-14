@@ -4,6 +4,8 @@ function getContextPath() {
     var result = pathName.substr(0,index+1);
     return result;
 }
+
+
 var ajaxObj = {
 	success : function(data) {
 		var root = getContextPath();

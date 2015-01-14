@@ -8,6 +8,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,7 +45,7 @@ public class IndexController extends KouQiangController {
 		return "/admin/index";
 	}
 	@RequestMapping(value = "/modular",method=RequestMethod.GET)
-	public String getModels(){
+	public String getModels(Model model,String modelId){
 		User user = getUser();
 		List<Modular> modulars = new ArrayList<>();
 		if(user.isMain()){
@@ -53,7 +54,9 @@ public class IndexController extends KouQiangController {
 			Role role = roleService.findRoleByUserId(user.getUuid());
 			modulars = modularService.findByRoleId(role.getUuid());
 		}
-		return "/base/sidebar";
+		model.addAttribute("models", modulars);
+		model.addAttribute("modelId", modelId);
+		return "/admin/base/sidebar";
 	}
 	
 }
