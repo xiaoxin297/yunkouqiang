@@ -2,6 +2,7 @@ package com.smilingframework.support.service;
 
 import com.smilingframework.service.base.BaseService;
 import com.smilingframework.support.model.sys.Clinic;
+import com.smilingframework.support.model.sys.User;
 
 public interface ClinicService extends BaseService<Clinic>{
 
@@ -11,4 +12,6 @@ public interface ClinicService extends BaseService<Clinic>{
 	 * @return
 	 */
 	public boolean hasClinic(String userId);
+	
+	public Clinic save(Clinic t,User user);
 }

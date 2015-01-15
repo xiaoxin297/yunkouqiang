@@ -73,9 +73,10 @@
 		min-height: 760px; 
 	}
 	.first-page-content { 
-  		margin-left: 0px; 
+  		margin-left: 280px; 
 		margin-top: 0px;
 		min-height: 760px; 
+		margin-right: 280px;
 	}
 
 	.page-sidebar-fixed .page-content {

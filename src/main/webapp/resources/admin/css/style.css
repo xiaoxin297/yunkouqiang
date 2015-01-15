@@ -925,6 +925,24 @@ Page title
   color: #888;
 }
 
+.first-page-title{
+  padding: 0px;
+  font-size: 30px;
+  letter-spacing: -1px;
+  display: block;
+  color: #FAF9F9;
+  margin: 20px 0px 15px 0px;
+  font-weight: 300;
+  font-family: 'Open Sans';
+}
+
+.first-page-title small{
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #F5EBEB;
+}
+
 /***
 Page breadcrumb
 ***/
