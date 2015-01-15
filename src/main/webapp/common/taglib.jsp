@@ -4,4 +4,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath}" ></c:set>
-<c:set var="token" value="<%=request.getParameter("token") %>" ></c:set>
+<c:set var="token" value='<%=request.getParameter("token") %>' ></c:set>
