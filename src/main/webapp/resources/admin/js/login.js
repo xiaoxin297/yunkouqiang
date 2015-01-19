@@ -66,11 +66,3 @@ var valication = {
 		error.addClass('help-small no-left-padding').insertAfter(element.closest('.input-icon'));
 	}
 };
-var Login = function() {
-	return {
-		init : function() {
-			$('.login-form').validate(valication);
-			$('#loginForm').ajaxForm(ajaxObj);
-		}
-	};
-}();

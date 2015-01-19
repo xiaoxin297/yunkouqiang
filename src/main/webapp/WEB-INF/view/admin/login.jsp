@@ -73,9 +73,148 @@
 			</div>
 			<div class="create-account">
 				<p>
-					还没有新账户 ?&nbsp; <a href="${root}/forword/web/register" id="register-btn" class="">注册新用户</a>
+					还没有新账户 ?&nbsp; <a href="javascript:;" id="register-btn" class="">注册新用户</a>
 				</p>
 			</div>
+		</form>
+		
+		<form class="form-vertical forget-form" action="index.html">
+
+			<h3 class="">Forget Password ?</h3>
+
+			<p>Enter your e-mail address below to reset your password.</p>
+
+			<div class="control-group">
+
+				<div class="controls">
+
+					<div class="input-icon left">
+
+						<i class="icon-envelope"></i>
+
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="Email" name="email" />
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="form-actions">
+
+				<button type="button" id="back-btn" class="btn">
+
+				<i class="m-icon-swapleft"></i> Back
+
+				</button>
+
+				<button type="submit" class="btn green pull-right">
+
+				Submit <i class="m-icon-swapright m-icon-white"></i>
+
+				</button>            
+
+			</div>
+
+		</form>
+
+		<!-- END FORGOT PASSWORD FORM -->
+
+		<!-- BEGIN REGISTRATION FORM -->
+
+		<form class="form-vertical register-form" action="${root}/register">
+
+			<h3 class="">注册</h3>
+
+			<p>在下面输入您的帐户资料:</p>
+
+			<div class="control-group">
+
+				<label class="control-label visible-ie8 visible-ie9">手机号</label>
+
+				<div class="controls">
+
+					<div class="input-icon left">
+
+						<i class="icon-user"></i>
+
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="phone" name="phone"/>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="control-group">
+
+				<label class="control-label visible-ie8 visible-ie9">密码</label>
+
+				<div class="controls">
+
+					<div class="input-icon left">
+
+						<i class="icon-lock"></i>
+
+						<input class="m-wrap placeholder-no-fix" type="password" id="register_password" placeholder="Password" name="password"/>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="control-group">
+
+				<label class="control-label visible-ie8 visible-ie9">确认密码</label>
+
+				<div class="controls">
+
+					<div class="input-icon left">
+
+						<i class="icon-ok"></i>
+
+						<input class="m-wrap placeholder-no-fix" type="password" placeholder="确认密码" name="rpassword"/>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="control-group">
+
+				<div class="controls">
+
+					<label class="checkbox">
+
+					<input type="checkbox" name="tnc"/> 我同意 <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+
+					</label>  
+
+					<div id="register_tnc_error"></div>
+
+				</div>
+
+			</div>
+
+			<div class="form-actions">
+
+				<button id="register-back-btn" type="button" class="btn">
+
+				<i class="m-icon-swapleft"></i>  返回
+
+				</button>
+
+				<button type="submit" id="register-submit-btn" class="btn green pull-right">
+
+				登录 <i class="m-icon-swapright m-icon-white"></i>
+
+				</button>            
+
+			</div>
+
 		</form>
 	</div>
 	<div class="copyright">2015 &copy; Metronic. Admin Dashboard Template.</div>
@@ -99,6 +238,7 @@
 <script src="${root}/resources/admin/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="${root}/resources/admin/js/app.js" type="text/javascript"></script>
 <script src="${root}/resources/admin/js/login.js" type="text/javascript"></script>
+<script src="${root}/resources/admin/js/login-soft.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
 		App.init();
