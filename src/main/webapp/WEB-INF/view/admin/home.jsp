@@ -31,7 +31,7 @@
 	<!-- BEGIN LOGIN -->
 	<div class="content">
 		<!-- BEGIN LOGIN FORM -->
-		<form id="loginForm" method="POST" style="display:${display.login}" class="form-vertical login-form" action="${root}/login">
+		<form id="loginForm" method="POST" style="display:${param.login}" class="form-vertical login-form" action="${root}/login">
 			<h3 class="form-title">登 录</h3>
 			<div class="alert alert-error hide">
 				<button class="close" data-dismiss="alert"></button>
@@ -78,7 +78,7 @@
 			</div>
 		</form>
 		
-		<form class="form-vertical forget-form" style="display:${display.forget}"  action="index.html">
+		<form class="form-vertical forget-form" style="display:${param.forget}"  action="index.html">
 
 			<h3 class="">忘记密码 ?</h3>
 
@@ -122,7 +122,7 @@
 
 		<!-- BEGIN REGISTRATION FORM -->
 
-		<form class="form-vertical register-form" style="display:${display.register}" action="${root}/register">
+		<form class="form-vertical register-form" style="display:${param.register}" action="${root}/register">
 
 			<h3 class="">注册</h3>
 
@@ -138,7 +138,7 @@
 
 						<i class="icon-user"></i>
 
-						<input class="m-wrap placeholder-no-fix" type="text" placeholder="phone" name="phone"/>
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="手机号码" name="phone"/>
 
 					</div>
 
@@ -189,7 +189,7 @@
 
 					<label class="checkbox">
 
-					<input type="checkbox" name="tnc"/> 我同意 <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+					<input type="checkbox" name="tnc"/> 我同意 <a href="#">云口腔服务协议</a>
 
 					</label>  
 

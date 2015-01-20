@@ -49,7 +49,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		}
 		if (needLogin == null || (needLogin != null && needLogin.needLogin())) {
 			//判断是否公开页面
-			if(uri.endsWith("/forword/web/register") || uri.endsWith("/forword/admin/login") || uri.endsWith("/forword/web/feedback")){
+			if(uri.endsWith("/forword/admin/home") || uri.endsWith("/forword/web/feedback")){
 				return super.preHandle(request, response, handler);
 			}
 			String token = request.getParameter("token");
@@ -83,6 +83,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 	private boolean authFail(HttpServletRequest request, HttpServletResponse response, BaseResponse result) throws IOException {
 		String login = request.getContextPath() + "/forword/admin/login";
 		response.setContentType("text/html");
+		response.setStatus(302);
 		response.setHeader("Location", login);
 		return false;
 	}
