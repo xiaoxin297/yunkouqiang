@@ -49,7 +49,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		}
 		if (needLogin == null || (needLogin != null && needLogin.needLogin())) {
 			//判断是否公开页面
-			if(uri.endsWith("/forword/admin/home") || uri.endsWith("/forword/web/feedback")){
+			if(uri.endsWith("/forword/admin/login") || uri.endsWith("/forword/admin/home") || uri.endsWith("/forword/web/feedback")){
 				return super.preHandle(request, response, handler);
 			}
 			String token = request.getParameter("token");

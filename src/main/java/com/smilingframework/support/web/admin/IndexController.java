@@ -23,6 +23,11 @@ import com.smilingframework.support.service.RoleService;
 import com.smilingframework.support.web.admin.model.index.IndexRequest;
 import com.smilingframework.support.web.base.KouQiangController;
 
+/**
+ * 首页 控制器
+ * @author robin wang
+ *
+ */
 @Controller
 public class IndexController extends KouQiangController {
 	

@@ -209,7 +209,7 @@
 
 				<button type="submit" id="register-submit-btn" class="btn green pull-right">
 
-				登录 <i class="m-icon-swapright m-icon-white"></i>
+				注册 <i class="m-icon-swapright m-icon-white"></i>
 
 				</button>            
 

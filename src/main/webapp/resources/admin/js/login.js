@@ -1,26 +1,3 @@
-function getContextPath() {
-    var pathName = document.location.pathname;
-    var index = pathName.substr(1).indexOf("/");
-    var result = pathName.substr(0,index+1);
-    return result;
-}
-
-
-var ajaxObj = {
-	success : function(data) {
-		var root = getContextPath();
-		if(root == "/forword"){
-			root = "";
-		}
-		if (data.code == "000000") {
-			//window.location.href = root+"/forword/admin/index?token="+data.result.token;
-			window.location.href = root+"/index?token="+data.result.token;
-		} else {
-			$(".alert-error-login").hide();
-			$(".alert-error-login").show();
-		}
-	}
-};
 var valication = {
 	errorElement : 'label', // default input error message container
 	errorClass : 'help-inline', // default input error message class
