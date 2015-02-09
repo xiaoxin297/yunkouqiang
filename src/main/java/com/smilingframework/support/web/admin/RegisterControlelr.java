@@ -1,4 +1,4 @@
-package com.smilingframework.support.web.web;
+package com.smilingframework.support.web.admin;
 
 
 import javax.validation.Valid;
@@ -16,7 +16,7 @@ import com.smilingframework.dao.base.BaseEntity;
 import com.smilingframework.support.common.SysUtils;
 import com.smilingframework.support.model.sys.User;
 import com.smilingframework.support.service.UserService;
-import com.smilingframework.support.web.web.model.RegisterAddRequest;
+import com.smilingframework.support.web.admin.model.RegisterAddRequest;
 import com.smilingframework.web.annotation.NeedLogin;
 import com.smilingframework.web.controller.base.BaseController;
 import com.smilingframework.web.controller.base.BaseResponse;

@@ -1,4 +1,4 @@
-package com.smilingframework.support.web.web.model;
+package com.smilingframework.support.web.admin.model;
 
 import org.hibernate.validator.constraints.NotBlank;
 
